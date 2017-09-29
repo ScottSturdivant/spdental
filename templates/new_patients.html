@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content">
+    <p>Are you a new patient and dreading the initial flurry of paperwork?  Get ahead of the curve
+       by downloading the forms and filling them out ahead of time.</p>
+    <ul>
+        <li><a href={{ url_for('static', filename='files/office_policy_sep_2017.pdf') }}>Office Policy</a></li>
+    </ul>
+    <p>We look forward to seeing you soon!</p>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="grids-example">
+<h1 style="text-align: center;">Dr. Heather Sturdivant</h1>
+</div>
+<div class="grids-example">
+  <div class="pure-g">
+        <div class="pure-u-1-2 pure-u-lg-1-4">
+            <img class="pure-img" src={{ url_for('static', filename='images/heather1.jpg') }}>
+        </div>
+        <div class="pure-u-1-2 pure-u-lg-1-4">
+            <img class="pure-img" src={{ url_for('static', filename='images/heather2.jpg') }}>
+        </div>
+        <div class="pure-u-1-2 pure-u-lg-1-4">
+            <img class="pure-img" src={{ url_for('static', filename='images/heather3.jpg') }}>
+        </div>
+        <div class="pure-u-1-2 pure-u-lg-1-4">
+            <img class="pure-img" src={{ url_for('static', filename='images/heather4.jpg') }}>
+        </div>
+  </div>
+</div>
+<div class="content">
+<p>Dentist, wife, mother, athlete:  These are just a few words to describe Dr. Heather Sturdivant.</p>
+<p>Dr. Sturdivant is originally from Great Falls, Montana and received her DDS degree from the University
+of Minnesota School of Dentistry (go Gophers!) after earning an undergraduate degree in Cell Biology and
+Neuroscience from Montana State University. She then completed a general practice residency at Denver
+Health.</p>
+<p>In her free time, Dr. Sturdivant enjoys running and traveling, opting to combine the two whenever
+possible.  Her notable acheivements include the Leadville Trail 100 Ultramarathon, an Ironman, and
+is rapidly closing in on completing a marathon in every state.</p>
+<p>When it comes to dentistry, Dr. Sturdivant believes in a conversative and compassionate approach.
+She will never try to upsell a service, or make you feel that your time isn't also valuable.  When
+you step foot into her office, you are family.</p>
+</div>
+{% endblock %}

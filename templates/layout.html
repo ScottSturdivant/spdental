@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Southpark Dentistry - Dr. Sturdivant">
+    <script src="https://use.fontawesome.com/5b1906ab4c.js"></script>
+    <title>Southpark Dentistry</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+       <!--[if lte IE 8]>
+           <link rel="stylesheet" href="/combo/1.18.13?/css/layouts/side-menu-old-ie.css">
+       <![endif]-->
+       <!--[if gt IE 8]><!-->
+           <link rel="stylesheet" href={{ url_for('static', filename='css/side-menu.css') }}>
+           <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+           <link rel="stylesheet" href={{ url_for('static', filename='css/custom.css') }}>
+       <!--<![endif]-->
+    <!--[if lt IE 9]>
+       <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107262051-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+    gtag('config', 'UA-107262051-1');
+    </script>
+</head>
+
+<body>
+
+<div id="layout">
+    {% include "includes/nav.html" %}
+
+    <div class="header">
+        <h1>Southpark Dentistry</h1>
+        <h2>Serving the Littleton and surrounding Colorado communities.</h2>
+        <h3>{{ get_open_info(hours) }}</h3>
+        <p><a href="tel:+1-303-738-8826" class="pure-button pure-button-primary"><i class="fa fa-phone fa-lg" arria-hidden="true"></i>&nbsp;&nbsp;(303) 738-8826</a></p>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    {% include "includes/footer.html" %}
+</div> <!-- layout -->
+
+<script language="javascript" type="text/javascript" src="{{ url_for('static', filename='js/ui.js') }}"></script>
+
+</body>
+</html>

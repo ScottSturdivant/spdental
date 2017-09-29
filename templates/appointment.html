@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content">
+{% if form %}
+<p>You may use this form to request an appointment.  We will do our best to accomodate your
+request.  Depending upon how busy we are, it may take some time (one business day) for us to get
+back to you. If you would prefer a more timely response, please consider giving us a call.</p>
+<form class="pure-form pure-form-aligned">
+    <fieldset class="pure-group">
+        <style scoped>
+            .form-error {
+                color: rgb(202, 60, 60);
+                }
+        </style>
+
+        {% for field in form %}
+        <div class="pure-control-group">
+            {{ field(class="pure-input-1") }}
+            {% if field.errors %}
+            <span class="pure-form-message-inline form-error">{% for error in field.errors %}{{ error|e }}{% endfor %}</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </fieldset>
+    <button type="submit" class="pure-button pure-input-1 pure-button-primary" formmethod="post">Submit</button>
+</form>
+{% else %}
+<p>We have received your request. Someone from our office will be getting back to you within a day.</p>
+<p>Thank you!</p>
+{% endif %}
+</div>
+{% endblock %}
